@@ -1,0 +1,10 @@
+version: '3'
+services:
+  fibonacci:
+    build:
+      dockerfile: ./Dockerfile
+      context: .
+    environment:
+      - HTTP_ADDRESS=${HTTP_ADDRESS}
+    ports:
+      - "80:8000"
